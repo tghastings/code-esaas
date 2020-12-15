@@ -1,8 +1,9 @@
 FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update \
-  && apt install -y zlib1g-dev ruby-full libsqlite3-dev nodejs npm curl supervisor \
+  && apt install -y zlib1g-dev ruby-full libsqlite3-dev nodejs npm curl supervisor zsh git \
   && gem install rails \
+  && gem install bundler \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
   && export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH" \
   && curl -fsSL https://code-server.dev/install.sh | sh \
