@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update \
-  && apt install -y zlib1g-dev ruby-full libsqlite3-dev nodejs npm curl supervisor zsh git \
+  && apt install -y zlib1g-dev ruby-full libsqlite3-dev libffi-dev nodejs npm curl supervisor zsh git \
   && gem install rails \
   && gem install bundler \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
