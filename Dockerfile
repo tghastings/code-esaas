@@ -9,8 +9,7 @@ RUN apt update \
   && export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH" \
   && curl -fsSL https://code-server.dev/install.sh | sh \
   && mkdir /root/environment \
-  && mkdir -p /var/log/supervisor \
-  && hostnamectl set-hostname student.devedu
+  && mkdir -p /var/log/supervisor
 
 ADD supervisord.conf /etc/
 
