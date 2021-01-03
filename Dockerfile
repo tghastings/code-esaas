@@ -10,7 +10,7 @@ RUN apt update \
   && curl -fsSL https://code-server.dev/install.sh | sh \
   && mkdir /root/environment \
   && mkdir -p /var/log/supervisor \
-  && sudo hostnamectl set-hostname student.devedu
+  && hostnamectl set-hostname student.devedu
 
 ADD supervisord.conf /etc/
 
