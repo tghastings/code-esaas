@@ -13,8 +13,6 @@ RUN apt update \
 
 ADD supervisord.conf /etc/
 
-VOLUME /root/environment
-
 EXPOSE 80 3000
 
 ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
