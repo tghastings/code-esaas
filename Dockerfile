@@ -3,7 +3,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV SHELL /bin/bash
 ENV GIT_EDITOR=nano
 RUN apt update \
-  && apt install -y zlib1g-dev ruby-full libsqlite3-dev libffi-dev libpq-dev nodejs npm curl supervisor zsh git nano \
+  && apt install -y zlib1g-dev ruby-full libsqlite3-dev libffi-dev libpq-dev nodejs npm curl supervisor zsh git nano vim\
   && gem install rails -v 5.2.4 \
   && gem install bundler \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
