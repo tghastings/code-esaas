@@ -1,0 +1,11 @@
+
+image: tghastings/code-esaas:latest
+manifests:
+  - image: tghastings/code-esaas:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: tghastings/code-esaas:arm64
+    platform:
+      architecture: arm64
+      os: linux
