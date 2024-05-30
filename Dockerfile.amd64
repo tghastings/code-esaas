@@ -1,11 +1,11 @@
-FROM ubuntu:jammy
+FROM ubuntu:24.04
 ARG DEBIAN_FRONTEND=noninteractive
 ENV SHELL /bin/bash
 ENV GIT_EDITOR=nano
 RUN apt update \
-  && apt install -y zlib1g-dev libsqlite3-dev libffi-dev libpq-dev nodejs ruby-full npm curl supervisor zsh git nano \
-  && gem install rails -v 7.0.3 \
-  && gem install bundler -v 2.0.2 \
+  && apt install -y zlib1g-dev libsqlite3-dev libffi-dev libpq-dev libyaml-dev nodejs ruby-full npm curl supervisor zsh git nano \
+  && gem install rails -v 7.1.3.3 \
+  && gem install bundler -v 2.5.11 \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
   && export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH" \
   && curl https://cli-assets.heroku.com/install.sh | sh \
